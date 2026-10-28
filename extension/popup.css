@@ -1,0 +1,68 @@
+:root {
+  --texte: #111;
+  --discret: #737373;
+  --fond: #fff;
+  --bordure: #dbdbdb;
+  --piste: #efefef;
+  --accent: #0095f6;
+  --alerte: #c62828;
+  --encart: #f5f9ff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --texte: #f5f5f5;
+    --discret: #a8a8a8;
+    --fond: #1e1e1e;
+    --bordure: #363636;
+    --piste: #363636;
+    --encart: #1f2a38;
+  }
+}
+
+body {
+  width: 340px;
+  margin: 0;
+  padding: 14px 16px;
+  font: 13px/1.45 -apple-system, system-ui, sans-serif;
+  color: var(--texte);
+  background: var(--fond);
+}
+h1 { font-size: 15px; margin: 0 0 10px; }
+p { margin: 4px 0; }
+.discret { color: var(--discret); font-size: 12px; }
+.statut { font-weight: 600; }
+.statut.alerte { color: var(--alerte); }
+
+.chiffres { display: flex; justify-content: space-between; font-variant-numeric: tabular-nums; }
+.barre { height: 10px; background: var(--piste); border-radius: 5px; overflow: hidden; margin: 4px 0 8px; }
+.remplissage { height: 100%; width: 0; background: var(--accent); transition: width 0.3s; }
+
+.stats { display: flex; gap: 8px; margin: 10px 0; }
+.stats div { flex: 1; border: 1px solid var(--bordure); border-radius: 8px; padding: 6px 8px; }
+.stats dt { color: var(--discret); font-size: 11px; }
+.stats dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.boutons { display: flex; gap: 6px; margin-bottom: 10px; }
+button {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+button.principal { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+button:disabled { opacity: 0.4; cursor: default; }
+
+.pourquoi { background: var(--encart); border-radius: 8px; padding: 8px 10px; margin-bottom: 10px; }
+.pourquoi p { color: var(--discret); font-size: 12px; }
+
+details { margin-top: 6px; }
+summary { cursor: pointer; font-weight: 600; }
+form { display: grid; gap: 6px; margin-top: 6px; }
+label { display: flex; justify-content: space-between; align-items: center; }
+input { width: 70px; padding: 3px 6px; border: 1px solid var(--bordure); border-radius: 6px;
+  background: transparent; color: inherit; font: inherit; }
+ul { padding-left: 18px; margin: 6px 0; max-height: 120px; overflow-y: auto; font-size: 12px; }

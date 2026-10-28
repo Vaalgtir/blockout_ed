@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bloqueur Instagram</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1>Bloqueur Instagram</h1>
+
+    <div class="progression">
+      <div class="chiffres"><span id="compteur">0 / 0</span><span id="pourcent">0 %</span></div>
+      <div class="barre"><div id="remplissage" class="remplissage"></div></div>
+    </div>
+
+    <p id="statut" class="statut"></p>
+    <p id="estimation" class="discret"></p>
+    <p id="dernier" class="discret"></p>
+
+    <dl class="stats">
+      <div><dt>Bloqués</dt><dd id="faits">0</dd></div>
+      <div><dt>Échecs</dt><dd id="echecs">0</dd></div>
+      <div><dt>Aujourd'hui</dt><dd id="quota">0 / 150</dd></div>
+    </dl>
+
+    <div class="boutons">
+      <button id="demarrer" class="principal">Démarrer</button>
+      <button id="pause">Pause</button>
+      <button id="reinitialiser">Réinitialiser</button>
+    </div>
+
+    <aside class="pourquoi">
+      <strong>Pourquoi c'est lent ?</strong>
+      <p id="explication"></p>
+    </aside>
+
+    <details>
+      <summary>Réglages</summary>
+      <form id="reglages">
+        <label>Délai min (s) <input type="number" name="delaiMin" min="10" required /></label>
+        <label>Délai max (s) <input type="number" name="delaiMax" min="10" required /></label>
+        <label>Plafond par jour <input type="number" name="plafondJour" min="1" max="500" required /></label>
+        <button type="submit">Enregistrer</button>
+      </form>
+    </details>
+
+    <details id="blocEchecs" hidden>
+      <summary>Détail des échecs</summary>
+      <ul id="listeEchecs"></ul>
+    </details>
+
+    <script src="affichage.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
