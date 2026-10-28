@@ -15,6 +15,12 @@ maximum) pour ne pas déclencher les restrictions anti-spam d'Instagram.
 Si l'extraction s'interrompt (limite Instagram), le fichier téléchargé contient la liste
 partielle, ce qui est indiqué dans son en-tête.
 
+**Si le script renvoie des erreurs 429**, utilise plutôt `scripts/capturer-abonnements.js` :
+ouvre le profil du compte, colle le script dans la console, puis clique sur « suivi(e)s ».
+Le script n'envoie aucune requête : il lit celles du site pendant que la liste défile
+automatiquement, puis télécharge `blocklist.js` quand plus rien ne se charge (ou quand tu tapes
+`terminerCapture()` dans la console).
+
 ## 2. Installer l'extension
 
 1. `chrome://extensions` → active le **mode développeur**.
