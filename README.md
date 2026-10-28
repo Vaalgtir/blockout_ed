@@ -9,6 +9,10 @@ estimation de fin indiquent où en est le blocage, et pourquoi il prend du temps
 actuelle contient 203 comptes. Installation : télécharger le dépôt, puis charger le dossier
 `extension/` dans `chrome://extensions` (mode développeur).
 
+<p align="center">
+  <img src="docs/capture-bandeau.png" alt="Bandeau de progression affiché sur Instagram : 33/203 comptes bloqués, prochain blocage dans 36 s, fin estimée" width="420" />
+</p>
+
 ## 1. Générer la liste
 
 1. Connecte-toi sur https://www.instagram.com dans Chrome.
