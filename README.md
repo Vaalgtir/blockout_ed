@@ -1,8 +1,13 @@
 # Bloqueur Instagram
 
-Extension Chrome qui bloque, depuis ton compte, une liste de comptes Instagram figée dans
-`extension/blocklist.js`. Les blocages sont espacés (30 à 60 s par défaut, 150 par jour au
-maximum) pour ne pas déclencher les restrictions anti-spam d'Instagram.
+**Bloqueur Instagram** bloque depuis ton compte une liste de comptes Instagram définie à
+l'avance. Un script à coller dans la console du navigateur récupère les abonnements d'un compte
+de référence et génère cette liste. L'extension bloque ensuite les comptes un par un, avec 30 à
+60 s entre chaque blocage et 150 par jour au maximum. Elle se met en pause automatiquement si
+Instagram signale trop d'actions. Une barre de progression, un compte à rebours et une
+estimation de fin indiquent où en est le blocage, et pourquoi il prend du temps. La liste
+actuelle contient 203 comptes. Installation : télécharger le dépôt, puis charger le dossier
+`extension/` dans `chrome://extensions` (mode développeur).
 
 ## 1. Générer la liste
 
@@ -39,3 +44,8 @@ La progression s'affiche dans le popup et dans un bandeau en bas à droite d'Ins
   de cliquer sur **Reprendre**, et réduis éventuellement le plafond dans les réglages.
 - L'automatisation est contraire aux conditions d'utilisation d'Instagram : garde un rythme
   modéré.
+
+## Licence
+
+[MIT](LICENSE) : tu peux utiliser, modifier et redistribuer ce code librement, en conservant la
+mention de copyright.
